@@ -1,15 +1,16 @@
+
 # include<stdio.h>
 void addition(int a,int b){
     printf(" addition %d",a+b);
 }
-void subraction(int c,int d ){
-    printf("subraction %d",c-d);   
+void subraction(int a,int b){
+    printf("subraction %d",a-b);   
 }
-void multiplication(int e,int f){
-    printf("multiplication %d",e*f);
+void multiplication(int a,int b){
+    printf("multiplication %d",a*b);
 }
-void division(int g,int h ){
-    printf(" division %d",g/h);
+void division(int a,int b ){
+    printf(" division %d",a/b);
 }
 void main()
 {
@@ -19,35 +20,27 @@ void main()
     printf("4. division\n");
     int choice;
     printf(" choose a number");
-    scanf("%d",choice);
+    scanf("%d",&choice);
+    int a,b;
+    printf("enter two numbers");
+    scanf("%d%d",&a,&b);
     switch(choice){
     {
         case 1:
-           int a,b;
-           printf("enter ");
-           scanf("%d%d",&a,&b);
            addition(a,b);
+           break;
         case 2:
-           int c,d;
-           printf(" enter two number");
-           scanf("%d%d",&c,&d);
-           subraction(c,d);
-         break;
+           subraction(a,b);
+           break;
         case 3:
-           int e,f;
-           printf("enter two number");
-           scanf("%d%d",&e,&f);
-           multiplication(e,f);
-         break;
+           multiplication(a,b);
+           break;
         case 4:
-           int g,h;
-           printf(" entera number");
-           scanf("%d%d",&g,&h);
-           division(g,h);
-         break;
+           division(a,b);
+           break;
         default:
              printf("the choice is wrong");
-         break;
+             break;
     }   
 }
 }
