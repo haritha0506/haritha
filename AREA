@@ -1,4 +1,5 @@
-# include<stdio.h>
+
+  # include<stdio.h>
 void areaofcircle(int r){
     printf("area of circle %d",3.14*r);
 }
@@ -9,7 +10,7 @@ void areaoftriangle(int h,int ba){
     printf("area of triangle %d",1/2*(ba*h));
 }
 void areaofsquare(int a){
-    printf(" area of square",a*a);
+    printf(" area of square %d",a*a);
 }
 void main()
 {
@@ -19,35 +20,36 @@ void main()
     printf("4.cal area of square\n");
     int choice;
     printf(" choose a number");
-    scanf("%d,&choice");
+    scanf("%d",&choice);
     switch(choice){
     {
         case 1:
-         int r;
-         printf("enter radius");
-         scanf("%d",&r);
-         areaofcircle(r);
+           int r;
+           printf("enter radius");
+           scanf("%d",&r);
+           areaofcircle(r);
+           break;
         case 2:
-         int l,b;
-         printf(" enter two number");
-         scanf("%d%d",&l,&b);
-         areaofrectangle(l,b);
-         break;
+           int l,b;
+           printf(" enter two number");
+           scanf("%d%d",&l,&b);
+           areaofrectangle(l,b);
+           break;
         case 3:
-         int h,ba;
-         printf("enter two number");
-         scanf("%d%d",&h,&ba);
-         areaoftriangle(h,ba);
-         break;
+           int h,ba;
+           printf("enter two number");
+           scanf("%d%d",&h,&ba);
+           areaoftriangle(h,ba);
+           break;
         case 4:
-         int a;
-         printf(" entera number");
-         scanf("%d",&a);
-         areaofsquare(a);
-         break;
-    default:
-     printf("the choice is wrong");
-      break;
+           int a;
+           printf(" entera number");
+           scanf("%d",&a);
+           areaofsquare(a);
+           break;
+        default:
+           printf("the choice is wrong");
+           break;
     }   
     }
 }
